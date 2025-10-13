@@ -7,16 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="container">
+        
         <div class="active-screen" id="start-screen">
             <h1>QUIZ TIME!!</h1>
+            <p>
+                TEST YOUR KNOWLEDGE WITH THESE FUN QUESTIONS!
+            </p>
             <BUTTON CLASS="btn" id="start-btn">START</BUTTON>
         </div>
         <div class="screen" id="question-screen">
-            
-
+            <div class="quiz-header">
+                <h1 id="question">QUESTIONS TEXT</h1>
+                <div id="quiz-info">
+                    <P>
+                        QUESTIONS <span id="current-question">1</span>
+                    </P>
+                    <P>
+                        of <span id = "total-questions">3</span>
+                        <p>
+                            SCORE : <span id="score">0</span></p>
+                </div>
         </div>
-
+            <div id="answers-container" class="answers-container">
+                <!-- answer buttons will be added here dynamically with js -->
+                 <div class="progress-bar">
+                    <div class="prgress" id="progress"></div>
+                    </div>
+                    <div class="result-screen" id="screen">
+                        <h1>QUIZ RESULT</h1>
+                        <div id="result-info">
+                            <p>YOU SCORED
+                                <span id="final-score">0</span>
+                            </p>
+                            <p>
+                                OUT OF <span id="max-score">3</span>
+                            </p>
+                        </div>
+              <div id="result-message">
+                <P>GOOD JOB!</P>
+              </div>
+              <button id="restart-btn">RESTART QUIZ</button>
+            </div>
         </div>
 
 
