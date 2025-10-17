@@ -24,6 +24,186 @@ body{
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
+    backdrop-filter: blur(8.5px);
+    max-width: 600px;
+    position: relative;
 
 }
+
+.screen{
+    display: block; 
+    padding: 5rem;
+    text-align: center;
+
     
+}
+
+.screen-active{
+    display: block;
+    padding: 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    text-decoration: wavy ;
+    text-shadow: #764ba2 2px 2px 4px;   
+}
+
+/* START SCREEN */
+#start-screen h1{
+    color: black;
+    margin-bottom: 20px;
+    font-size: 3rem;
+
+}
+
+#start-screen p{
+    color: black;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.quiz-header{
+    margin-bottom: 1rem;
+
+}
+#question-text{
+    color: black;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px white;
+}
+
+.btn{
+    background: #764ba2;
+    border: expanded;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    margin: 2rem;
+    border-radius: 25px;
+    cursor: grabbing;
+    transition: background 0.3s ease;
+    font-weight: 700;
+    font-size: larger;
+
+
+}
+
+.quiz-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    text-shadow: 1px 1px 2px white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.answers-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1rem;
+    text-align: center;
+
+}
+
+.answer-btn{
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #764ba2;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px white;
+}
+
+
+.answer-btn:hover{
+    background: #569fdb;
+    transform: scale(1.05);
+    color: white;
+    border: none;
+    text-shadow: 2px 2px 4px black;
+}
+
+.answer-btn.correct{
+    background: #28a745;
+    border: none;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.answer-btn.incorrect{
+    background: #dc3545;
+    border: none;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.progress{
+    height: 100%;
+    background: #569fdb;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* RESULT SCRENE*/
+
+#result-screen h1 {
+     color: black;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    text-decoration: dashed;
+}
+
+.result-info{
+    font: 1em bold;
+    text-overflow: ellipsis;
+    text-shadow: #28a745;
+    padding: 10px;
+    margin-bottom: 15px;
+
+}
+
+.result-info p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    text-shadow: #28a745;
+}
+
+button{
+   background-color:rgba(255, 255, 255, 0.1);
+   padding: 15px;
+   border-radius: 30%;
+   margin-top: 2px;
+   border: expanded;
+   padding: 0.75rem , 1.5rem;
+}
+button:hover{
+    background-color: #7215b9;
+    cursor: grabbing;
+}
+
+/* RESPONSIVE DESIGN*/
+@media (max-width:500px){
+
+    .screen{
+        padding: 1rem;
+    }
+    
+}
